@@ -1,9 +1,12 @@
 .appContainer {
-  background-color: lightblue;
-  width: 50%;
+  /* background-color: lightblue; */
+  width: 90%;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
 
 /* .App {
   text-align: center;

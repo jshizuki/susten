@@ -10,9 +10,9 @@ function AssetClass({ assetClass }) {
           class="fa-solid fa-circle"
           style={{ color: assetClass.bulletcolor }}
         ></i>
-        <p>{assetClass.type}</p>
+        <p>{assetClass.name}</p>
       </div>
-      <p><b>{assetClass.percentage}%</b></p>
+      <p><b>{assetClass.value}%</b></p>
     </div>
   );
 }

@@ -2,7 +2,9 @@
   /* background-color: darkgoldenrod; */
   display: flex;
   justify-content: space-between;
-  padding: 2px;
+  align-items: center;
+  padding: 8px;
+  padding-left: 0px;
 }
 
 .bulletAndClass {
