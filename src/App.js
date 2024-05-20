@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // Components
 import AssetDistributionList from "./components/AssetDistributionList";
 import PieChartForSusten from "./components/PieChartForSusten";
+import PieChartForSusten2 from "./components/PieChartForSusten2";
 // CSS
 import styles from "./App.module.css";
 
@@ -27,13 +28,13 @@ const portfolioData = [
   {
     id: 4,
     name: "ハイ・イールド債券",
-    bulletcolor: "#FFF9A5",
+    bulletcolor: "#bdb646",
     value: 0.8,
   },
   {
     id: 5,
     name: "米国投資適格債券",
-    bulletcolor: "#DFEFCA",
+    bulletcolor: "#76885f",
     value: 23.9,
   },
   {
@@ -76,7 +77,7 @@ function App() {
         </div>
         {page === "資産クラス別" ? (
           <div className={styles.appContent}>
-            <PieChartForSusten portfolioData={portfolioData} />
+            <PieChartForSusten2 portfolioData={portfolioData} />
             <AssetDistributionList portfolioData={portfolioData} />
           </div>
         ) : (

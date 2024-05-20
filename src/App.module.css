@@ -1,6 +1,6 @@
 .appContainer {
   /* background-color: lightblue; */
-  width: 90%;
+  /* width: 90%; */
   margin: auto;
   display: flex;
   justify-content: center;
@@ -9,9 +9,9 @@
 }
 
 .appContent {
-  /* background-color: lightskyblue; */
-  min-height: 580px;
-  min-width: 300px;
+  /* background-color: rgb(65, 130, 170); */
+  min-height: 620px;
+  min-width: 350px;
 }
 
 h4 {
