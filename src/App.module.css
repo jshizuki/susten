@@ -8,6 +8,50 @@
   height: 100vh;
 }
 
+.appContent {
+  /* background-color: lightskyblue; */
+  min-height: 580px;
+  min-width: 300px;
+}
+
+h4 {
+  color: white;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+#underConstruction {
+  text-align: center;
+  padding: 10px;
+}
+
+.appButtons {
+  /* background-color: beige; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: rgb(203, 203, 203);
+  color: rgb(6, 6, 79);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* background-color: rgb(6, 6, 79); */
+
+.button:hover {
+  background-color: rgb(6, 6, 79);
+  color: white;
+}
+
+.active {
+  background-color: rgb(6, 6, 79);
+  color: white;
+}
+
 /* .App {
   text-align: center;
 }

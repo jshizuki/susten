@@ -1,6 +1,9 @@
-import styles from "./App.module.css";
+import React, { useState } from "react";
+// Components
 import AssetDistributionList from "./components/AssetDistributionList";
 import PieChartForSusten from "./components/PieChartForSusten";
+// CSS
+import styles from "./App.module.css";
 
 const portfolioData = [
   {
@@ -48,11 +51,39 @@ const portfolioData = [
 ];
 
 function App() {
+  const [page, setPage] = useState("資産クラス別");
+
+  const handlePageToggle = (selectedPage) => {
+    setPage(selectedPage);
+  };
+
   return (
     <div className={styles.appContainer}>
       <div>
-        <PieChartForSusten portfolioData={portfolioData} />
-        <AssetDistributionList portfolioData={portfolioData} />
+        <div className={styles.appButtons}>
+          <h4
+            className={`${styles.button} ${page === "資産クラス別" ? styles.active : ""}`}
+            onClick={() => handlePageToggle("資産クラス別")}
+          >
+            資産クラス別
+          </h4>
+          <h4
+            className={`${styles.button} ${page === "ファンド別" ? styles.active : ""}`}
+            onClick={() => handlePageToggle("ファンド別")}
+          >
+            ファンド別
+          </h4>
+        </div>
+        {page === "資産クラス別" ? (
+          <div className={styles.appContent}>
+            <PieChartForSusten portfolioData={portfolioData} />
+            <AssetDistributionList portfolioData={portfolioData} />
+          </div>
+        ) : (
+          <div className={styles.appContent}>
+            <p id={styles.underConstruction}>Under construction</p>
+          </div>
+        )}
       </div>
     </div>
   );
